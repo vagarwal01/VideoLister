@@ -1,0 +1,668 @@
+		body {
+            background-image: url('bg.jpg');
+			background-repeat: no-repeat;
+			background-size: cover;
+			user-select: none;
+			overflow-x: hidden; 
+		}
+		.section{
+			position: relative;
+			width: 100%;
+			height: 500px;
+		}
+		.vide-container {
+		    border-bottom: 4px solid black;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			overflow: hidden;
+			width: 100%;
+			height: 500px;
+		}
+		.god-name {
+		    z-index: 7; 
+		    color: yellow;
+		    position: absolute; 
+		    font-weight: bold;
+		    font-family: Comic Sans MS;
+            -webkit-text-stroke-width: 7px;
+            -webkit-text-stroke-color: black;
+            bottom: 60px;
+		    line-height: 90%;            
+		    font-size: 100px;
+		    text-align: center;
+		    width: 100%;
+		}
+		.god-image {
+		    z-index: 5; 
+		    position: absolute; 
+		    top: 130px; 
+		    right: 5px;
+		    height: 75%;
+		}
+		.search-box {
+		    z-index: 10;
+		    position: absolute;
+		    top: 30%;
+		    left: 50%;
+		    transform: translate(-50%, -50%);
+		    background: none;
+		    height: 40px;
+		    transition: 0.4s;
+		    border-bottom-right-radius: 20px;
+		    border-top-right-radius: 20px;
+		    border-bottom-left-radius: 40px;
+		    border-top-left-radius: 40px;
+		    padding: 10px;
+		}
+		.search-box:hover {
+		    border: 2px solid black;
+		    background: #FFC300;
+		}
+		.search-box:hover .search-txt {
+		    width: 240px;
+		    padding: 0 6px;
+		}
+		.search-box:hover .search-btn {
+            background: white;
+            color: black;
+            cursor: pointer;
+		}
+		.search-btn {
+		    color: #000;
+		    float: right;
+		    font-weight: bold;
+		    width: 60px;
+		    height: 40px;
+		    font-size: 22px;
+		    outline: none;
+		    border-radius: 20%;
+		    border: 2px solid black;
+		    background: #EBEB3C;
+		    display: flex;
+		    justify-content: center;
+		    align-items: center;
+		    transition: 0.4s;
+		}
+        .search-txt {
+            border: none;
+            background: none;
+            outline: none;
+            float: left;
+            padding: 0;
+            font-weight: bold;
+            color: #900C3F;
+            font-size: 16px;
+            transition: 0.4s;
+            line-height: 40px;
+            width: 0px;
+        }
+        .blank {
+            height: 500px;
+        }
+        .result {
+            font-size: 25px; 
+            font-weight: bold
+        }
+		.main {
+		    z-index: 20;
+			margin: 2%;
+			margin-top: 5%;
+   		}
+
+		.card {
+		    z-index: 20;
+		    display: inline-flex;
+		    box-shadow: 2px 2px 20px black;
+		    border-radius: 10px; 
+		   	margin: 2%;
+		   	background: orange;
+		   	position: relative;
+		   	flex-direction: column;
+		}
+		#image {
+		  width: 100%;
+		  display: block;
+		  position: relative;
+		}
+		#image img {
+		  width: 100%;
+		  border-top-left-radius: 10px;
+		  border-top-right-radius: 10px;
+		}
+		.triangle {
+	        width: 50px;
+	        height: 37px;
+	        background-color: black;
+	        position: absolute;
+	        opacity: .7;
+	        z-index: 5;
+	        transition: 0.5s;
+    		border-radius: 8px; 
+		}
+		.triangle:before {
+			content: "";
+	        width: 0px;
+	        height: 0px;
+	        position: absolute;
+	        top: 8px;
+	        left: 16px;
+	        z-index: 5;
+	        transition: 0.5s;
+	        border-top: 10px solid transparent;
+	        border-left: 20px solid white;
+	        border-bottom: 10px solid transparent;			
+		}
+		#image:hover .triangle {
+			background-color: red;
+			opacity: 1;
+		}
+		.title{
+		  	text-align: center;
+		}
+        h1 {
+        }
+		p {
+		    padding-left: 5px;
+		    padding-right: 5px;
+		    font-weight: bold;
+		}
+		button{
+			align-items: center;
+		  	margin-top: 5px;
+		  	background-color: white;
+		  	border: 2px solid black;
+		  	border-radius: 10px;
+		  	padding:10px;
+		  	overflow: hidden;
+		  	position: absolute;
+            left: 35%;		  
+		  	bottom: 20px;
+		}
+		button:hover{
+		  	background-color: red;
+		  	color: white;
+		  	transition: .5s;
+		  	cursor: pointer;
+		}
+		.card:hover {
+		    background-color: transparent;
+		  	transition: .5s;
+		}
+		
+		@media only screen and (min-width: 400px) {
+			.triangle {
+			    top: 35%;
+			    left: 40%;
+			}
+			.title {
+			    height: 170px;
+			}
+			h1 {
+			    font-size: 23px;
+			    padding-left: 5px;
+			    padding-right: 5px;
+			}
+			p {
+			    margin-top: 0px;
+			    font-size: 15px;
+			}
+			button {
+			    width: 30%;
+                font-size: 15px;
+                font-weight: bold;
+			}
+		}
+
+		@media only screen and (min-width: 1300px) {
+		    .section {
+		        justify-content: center;
+		    }
+			.card {
+				width: 20%;
+				height: 430px;
+			}
+		}
+
+		@media only screen and (min-width: 1200px) and (max-width: 1300px) {
+		    .section {
+		        justify-content: center;
+		    }
+			.card {
+				width: 20%;
+				height: 400px;
+			}
+		}
+		
+		@media only screen and (max-width: 1200px) {
+			.card {
+				width: 22%;
+    		   	margin: 1%;
+				height: 398px;
+			}
+		}
+		@media only screen and (max-width: 1150px) {
+			.card {
+				width: 24%;
+    		   	margin: 2%;
+				height: 398px;
+			}
+		}
+		@media only screen and (max-width: 1100px) {
+			.card {
+				width: 24%;
+    		   	margin: 2%;
+				height: 394px;
+			}
+		}
+		@media only screen and (max-width: 1050px) {
+			.card {
+				width: 25%;
+    		   	margin: 3%;
+				height: 394px;
+			}
+		}
+		@media only screen and (max-width: 1000px) {
+			.card {
+				width: 25%;
+    		   	margin: 3%;
+				height: 390px;
+			}
+		}
+		@media only screen and (max-width: 950px) {
+			.card {
+				width: 27%;
+    		   	margin: 2%;
+				height: 394px;
+			}
+            .god-name {
+    		    font-size: 80px;
+                -webkit-text-stroke-width: 5px;
+            }
+            .search-box {
+                top: 10%;
+    		    border: 2px solid black;
+    		    background: #FFC300;
+            }
+		    .search-btn {
+	            background: #900C3F;
+                color: white;
+        	    width: 70px;
+        	    height: 40px;
+        	    font-size: 20px;
+		    }
+    		.search-txt {
+    		    font-size: 20px;
+    		    line-height: 40px;
+                width: 290px;
+    		}
+		}
+		@media only screen and (max-width: 900px) {
+		    .main {
+		        margin-top: 10%;
+		    }
+			.card {
+				width: 29%;
+    		   	margin: 2%;
+				height: 394px;
+			}
+		}
+		@media only screen and (max-width: 850px) {
+			.card {
+				width: 31%;
+    		   	margin: 1%;
+				height: 394px;
+			}
+		}
+		@media only screen and (max-width: 800px) {
+			.card {
+				width: 34%;
+    		   	margin: 2%;
+				height: 400px;
+			}
+            .search-box {
+                top: 10%;
+    		    border: 2px solid black;
+    		    background: #FFC300;
+            }
+		    .search-btn {
+	            background: #900C3F;
+                color: white;
+        	    width: 70px;
+        	    height: 40px;
+        	    font-size: 15px;
+		    }
+    		.search-txt {
+    		    font-size: 15px;
+    		    line-height: 40px;
+                width: 250px;
+    		}
+		}
+		@media only screen and (max-width: 750px) {
+			.card {
+				width: 36%;
+    		   	margin: 2%;
+				height: 400px;
+			}
+            .god-name {
+    		    font-size: 70px;
+    		    -webkit-text-stroke-width: 4px;
+            }
+            .search-box {
+                top: 10%;
+    		    border: 2px solid black;
+    		    background: #FFC300;
+            }
+		    .search-btn {
+	            background: #900C3F;
+                color: white;
+        	    width: 70px;
+        	    height: 40px;
+        	    font-size: 15px;
+		    }
+    		.search-txt {
+    		    font-size: 15px;
+    		    line-height: 40px;
+                width: 250px;
+    		}
+		}
+		@media only screen and (max-width: 700px) {
+			.card {
+			    width: 38%;
+			    margin: 2%;
+			    height: 400px;
+			}
+            .search-box {
+                top: 10%;
+    		    border: 2px solid black;
+    		    background: #FFC300;
+            }
+		    .search-btn {
+	            background: #900C3F;
+                color: white;
+        	    width: 60px;
+        	    height: 35px;
+        	    font-size: 15px;
+		    }
+    		.search-txt {
+    		    font-size: 15px;
+    		    line-height: 30px;
+                width: 230px;
+    		}
+		}
+		@media only screen and (max-width: 650px) {
+			.card {
+			    width: 40%;
+			    margin: 2%;
+			    height: 400px;
+			}
+            .god-name {
+    		    font-size: 60px;
+    		    -webkit-text-stroke-width: 4px;
+            }
+            .search-box {
+                top: 10%;
+    		    border: 2px solid black;
+    		    background: #FFC300;
+            }
+		    .search-btn {
+	            background: #900C3F;
+                color: white;
+        	    width: 60px;
+        	    height: 35px;
+        	    font-size: 15px;
+		    }
+    		.search-txt {
+    		    font-size: 15px;
+    		    line-height: 40px;
+                width: 200px;
+    		}
+		}
+		@media only screen and (max-width: 600px) {
+			.card {
+			    width: 45%;
+			    margin: 2%;
+			    height: 400px;
+			}
+		}
+		@media only screen and (max-width: 550px) {
+			.card {
+			    width: 49%;
+			    margin: 2%;
+			    height: 400px;
+			}
+		}
+		@media only screen and (max-width: 500px) {
+			.card {
+			    width: 52%;
+			    margin: 2%;
+			    height: 390px;
+			}
+		}
+
+		@media only screen and (max-device-width: 700px) {
+		    .blank {
+		        height: 1200px;
+		    }
+           .result {
+                margin-top: 50px;
+                font-size: 60px; 
+            }
+            .search-box {
+                top: 10%;
+    		    border: 2px solid black;
+    		    background: #FFC300;
+            }
+		    .search-btn {
+	            background: #900C3F;
+                color: white;
+        	    width: 90px;
+        	    height: 40px;
+        	    font-size: 30px;
+		    }
+    		.search-txt {
+    		    font-size: 24px;
+    		    line-height: 50px;
+                width: 350px;
+    		}
+    		::placeholder {
+              color: black;
+              opacity: 1; /* Firefox */
+            }
+            
+            :-ms-input-placeholder { /* Internet Explorer 10-11 */
+             color: black;
+            }
+            
+            ::-ms-input-placeholder { /* Microsoft Edge */
+             color: black;
+            }
+            .god-name {
+    		    font-size: 80px;
+    		    -webkit-text-stroke-width: 5px;
+            }
+    		.search-box:hover .search-txt {
+    		    width: 350px;
+    		}
+    		.main {
+    		    margin-top: 7%;
+    		}
+			.card {
+			    margin: 2%;
+				width: 45%;
+				height: 660px;
+			}
+            .triangle {
+    	        top: 40%;
+    	        left: 45%;
+            }
+			.title {
+			    height: 290px;
+			}
+			h1 {
+			    font-size: 35px;
+			    padding-left: 7px;
+			    padding-right: 7px;
+			}
+			p {
+			    margin-top: 0px;
+			    font-size: 29px;
+			}
+			button {
+			    width: 30%;
+                font-size: 25px;
+                font-weight: bold;
+			}
+            .share {
+                bottom: 20%;
+                width: 200px;
+                height: 70px;
+                line-height: 70px;
+                font-size: 50px;
+            }
+		}
+
+		@media only screen and (min-device-width: 700px) and (max-device-width: 1200px) {
+		    .blank {
+		        height: 500px;
+		    }
+            .god-name {
+    		    font-size: 80px;
+    		    -webkit-text-stroke-width: 3px;
+            }
+            .search-box {
+                top: 10%;
+    		    border: 2px solid black;
+    		    background: #FFC300;
+            }
+		    .search-btn {
+	            background: black;
+                color: white;
+        	    width: 90px;
+        	    height: 40px;
+        	    font-size: 23px;
+		    }
+    		.search-txt {
+    		    font-size: 23px;
+    		    line-height: 50px;
+                width: 350px;
+    		}
+    		.search-box:hover .search-txt {
+    		    width: 350px;
+    		}
+    		::placeholder {
+              color: #566573;
+              opacity: 1; /* Firefox */
+            }
+            
+            :-ms-input-placeholder { /* Internet Explorer 10-11 */
+             color: #566573;
+            }
+            
+            ::-ms-input-placeholder { /* Microsoft Edge */
+             color: #566573;
+            }
+    		.main {
+    		    margin-top: 7%;
+    		}
+			.card {
+			    margin: 3%;
+				width: 44%;
+				height: 607px;
+			}
+            .triangle {
+    	        top: 40%;
+    	        left: 45%;
+            }
+			.title {
+			    margin-top: -15px;
+			    height: 310px;
+			}
+			h1 {
+			    font-size: 30px;
+			    padding-left: 7px;
+			    padding-right: 7px;
+			}
+			p {
+			    margin-top: 0px;
+			    font-size: 23px;
+			    padding-left: 7px;
+			    padding-right: 7px;
+			}
+			button {
+			    width: 30%;
+                font-size: 25px;
+                font-weight: bold;
+			}
+		}
+		@media only screen and (min-device-width: 700px) and (max-device-width: 1200px) and (orientation: landscape) {
+		    .blank {
+		        height: 500px;
+		    }
+            .god-name {
+    		    font-size: 80px;
+    		    -webkit-text-stroke-width: 3px;
+            }
+            .search-box {
+                top: 10%;
+    		    border: 2px solid black;
+    		    background: #FFC300;
+            }
+		    .search-btn {
+	            background: black;
+                color: white;
+        	    width: 90px;
+        	    height: 40px;
+        	    font-size: 23px;
+		    }
+    		.search-txt {
+    		    font-size: 23px;
+    		    line-height: 50px;
+                width: 350px;
+    		}
+    		.search-box:hover .search-txt {
+    		    width: 350px;
+    		}
+    		::placeholder {
+              color: #566573;
+              opacity: 1; /* Firefox */
+            }
+            
+            :-ms-input-placeholder { /* Internet Explorer 10-11 */
+             color: #566573;
+            }
+            
+            ::-ms-input-placeholder { /* Microsoft Edge */
+             color: #566573;
+            }
+    		.main {
+    		    margin-top: 7%;
+    		}
+			.card {
+			    margin: 1%;
+			    margin-bottom: 3%;
+				width: 31%;
+				height: 500px;
+			}
+            .triangle {
+    	        top: 40%;
+    	        left: 45%;
+            }
+			.title {
+			    height: 310px;
+			}
+			h1 {
+			    font-size: 25px;
+			    padding-left: 7px;
+			    padding-right: 7px;
+			}
+			p {
+			    margin-top: 0px;
+			    font-size: 20px;
+			}
+			button {
+			    width: 30%;
+                font-size: 20px;
+                font-weight: bold;
+			}
+		}
